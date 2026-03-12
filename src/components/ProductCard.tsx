@@ -9,8 +9,8 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
-    <div className="product-card">
-      <img
+    <div className="product-card ">
+      <img className="product-img"
         src={`/images/${product.image}`}
         alt={product.name}
         onError={(e) => {
