@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchProducts } from './services/api';
 import type { Product } from './types/ProductType';
+import Footer from "./components/Footer"
 
 import Header from './components/Header';
 import Sort from './components/Sort';
@@ -75,6 +76,8 @@ function App() {
         <ProductList products={paginated} />
 
         <Pagination total={sorted.length} perPage={itemsPerPage} page={page} onChange={setPage} />
+
+        <Footer />
       </div>
     </>
   );
