@@ -4,7 +4,10 @@
 
 body {
   margin: 0;
-  background: #f6f7f9;
+}
+
+img {
+  padding-bottom: 18.5px;
 }
 
 .container {
@@ -44,6 +47,11 @@ body {
   border: 1px solid #e5e7eb;
 }
 
+.card_title {
+  max-width: 292px;
+  padding-bottom: 16px;
+}
+
 /* карточка */
 .product-card {
   width: 347px;
@@ -51,7 +59,6 @@ body {
 
   background: white;
   border-radius: 12px;
-  padding: 0 20px;
 
   display: flex;
   flex-direction: column;
@@ -68,39 +75,48 @@ body {
 }
 
 /* цена */
-
 .price-row {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding-bottom: 32px;
 }
 
 .old-price {
   text-decoration: line-through;
   color: #9ca3af;
-  font-size: 14px;
+  font-size: 22px;
 }
 
 .price-now {
-  color: #2563eb;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 22px;
+
+  background: linear-gradient(90deg, #003181 0%, #2288ED 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
 .discount {
+  width: 44px;
+  height: 18px;
   background: #ef4444;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   padding: 2px 6px;
   border-radius: 4px;
 }
 
 /* рейтинг */
-
 .rating {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 6px;
+  padding-bottom: 32px;
 }
 
 .star {
@@ -112,22 +128,52 @@ body {
 }
 
 .reviews {
+  width: 22px;
+  height: 14px;
   color: #6b7280;
-  font-size: 12px;
+  font-size: 14px;
 }
-
-/* наличие */
 
 .meta {
   display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  margin-top: 6px;
+  align-items: center;
+  gap: 14px;
+}
+
+.meta-icon {
+  width: 16px;
+  height: 16px;
+  padding: 0;
 }
 
 .stock {
-  color: #22c55e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
 }
+
+.stock.in {
+  width: 91px;
+  height: 18px;
+  gap: 8px;
+  color: #0cba7a;
+}
+
+.stock.out {
+  color: #9ca3af;
+}
+
+.stock-icon {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+}
+
+.water-icon {
+  padding: 0;
+}
+
 
 .category {
   color: #9ca3af;
@@ -139,7 +185,6 @@ body {
 }
 
 /* пагинация */
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -158,4 +203,73 @@ body {
 .pagination .active {
   background: #2563eb;
   color: white;
+}
+
+.discount-badge {
+  position: relative;
+  width: 44px;
+  height: 18px;
+  display: inline-block;
+}
+
+.discount-bg {
+  width: 44px;
+  height: 18px;
+  display: block;
+  padding: 0;
+}
+
+.discount-text {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding-left: 2px;
+  left: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.volume-select {
+  width: 123px;
+  height: 50px;
+
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+
+  padding: 0 12px;
+  background: white;
+
+  font-size: 14px;
+}
+
+.cart-btn {
+  flex: 1;
+
+  height: 50px;
+
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+
+  background: #E8F4FF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px;
+  cursor: pointer;
 }
