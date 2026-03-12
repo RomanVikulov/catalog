@@ -49,6 +49,7 @@ img {
 
 .card_title {
   max-width: 292px;
+  height: 75px;
   padding-bottom: 16px;
 }
 
@@ -124,7 +125,7 @@ img {
 }
 
 .star.active {
-  color: #2563eb;
+  color: rgba(67, 160, 253, 1);
 }
 
 .reviews {
