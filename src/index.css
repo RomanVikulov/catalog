@@ -182,7 +182,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin: 40px 0;
+  margin: 31px 0 67px 0;
 }
 
 .pagination button {
@@ -358,24 +358,86 @@ body {
 
 .search-icon {
   position: absolute;
-    left: 16.02px;
-    top: 11.42px;
-    bottom: 11.42px;
-    /* transform: translateY(-50%); */
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
+  left: 16.02px;
+  top: 11.42px;
+  bottom: 11.42px;
+  /* transform: translateY(-50%); */
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }
 
 .header-search {
   width: 100%;
   height: 44px;
 
-  padding-left: 51.63px; /* место для иконки */
+  padding-left: 51.63px;
+  /* место для иконки */
 
   border-radius: 10px;
   border: 1px solid #e5e7eb;
 
   background: #f6f7f9;
   font-size: 14px;
+}
+
+.footer {
+  height: 80px;
+}
+
+.footer-inner {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+
+.footer-logo {
+  height: 40px;
+  margin-right: 5px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #8090A4;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-right img {
+  height: 24px;
+}
+
+.footer-made {
+  position: relative;
+  width: 58px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.made-bg {
+  width: 58px;
+  height: 40px;
+}
+
+.made-ua {
+  position: absolute;
+
+  width: 39px;
+  height: 29px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
