@@ -158,20 +158,16 @@ body {
 }
 
 .stock.in {
-  width: 91px;
-  height: 18px;
-  gap: 8px;
   color: #0cba7a;
 }
 
 .stock.out {
-  color: #9ca3af;
+  color: #c9c9c9;
 }
 
 .stock-icon {
   width: 16px;
   height: 16px;
-  padding: 0;
 }
 
 .water-icon {
