@@ -202,8 +202,9 @@ img {
 }
 
 .pagination .active {
-  background: #2563eb;
-  color: white;
+    border-radius: 6px;
+    border: 1px solid #43A0FD;
+
 }
 
 .discount-badge {
