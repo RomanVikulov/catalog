@@ -118,8 +118,12 @@ body {
 }
 
 .product-img {
+  width: 347px;
+  height: 347px;
+  display: block;
   object-fit: contain;
   margin-bottom: 18.5px;
+  flex-shrink: 0;
 }
 
 /* цена */
