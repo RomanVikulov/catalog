@@ -1,3 +1,57 @@
+@font-face {
+  font-family: "Afacad";
+  src: url("./assets/fonts/afacad-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klein";
+  src: url("./assets/fonts/klein-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klein";
+  src: url("./assets/fonts/klein-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-border: #e5e7eb;
+  --color-bg-light: #f6f7f9;
+
+  --color-bg-dropdown: #f3f4f6;
+  --color-blue: #43a0fd;
+  --color-blue-light: #e8f4ff;
+  --color-blue-light-hover: #dceeff;
+  --color-blue-light-active: #cfe7ff;
+
+  --color-text-dark: #1f2937;
+  --color-text-main: #182A42;
+  --color-text-muted: #9ca3af;
+  --color-text-soft: #6b7280;
+  --color-text-footer: #8090A4;
+
+  --color-shadow: #0000001f;
+
+  --color-green: #0cba7a;
+  --color-gray: #c9c9c9;
+
+  --color-star: #d1d5db;
+
+  --color-discount: #ef4444;
+  --color-old-price-line: #ff2741;
+
+  --price-gradient: linear-gradient(90deg, #003181 0%, #2288ed 100%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -36,15 +90,15 @@ body {
   position: absolute;
   right: 0;
   top: 98.37px;
-  /* подгони 40–46px по макету */
 }
-
-
 
 .card_title {
   max-width: 292px;
   height: 75px;
   padding-bottom: 16px;
+
+  font-family: "Klein";
+  font-weight: 500;
 }
 
 /* карточка */
@@ -52,7 +106,7 @@ body {
   width: 347px;
   height: 657px;
 
-  background: white;
+  background: var(--color-background);
   border-radius: 12px;
 
   display: flex;
@@ -78,28 +132,35 @@ body {
 
 .old-price {
   text-decoration: line-through;
-  color: #9ca3af;
+  text-decoration-color: var(--color-old-price-line);
+  color: var(--color-text-muted);
   font-size: 22px;
+
+  font-family: "Klein";
+  font-weight: 500;
 }
 
 .price-now {
   font-weight: 700;
   font-size: 22px;
 
-  background: linear-gradient(90deg, #003181 0%, #2288ed 100%);
+  background: var(--price-gradient);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   background-clip: text;
   color: transparent;
+
+  font-family: "Klein";
+  font-weight: 500;
 }
 
 .discount {
   width: 44px;
   height: 18px;
-  background: #ef4444;
-  color: white;
+  background: var(--color-discount);
+  color: var(--color-background);
   font-size: 14px;
   padding: 2px 6px;
   border-radius: 4px;
@@ -114,17 +175,17 @@ body {
 }
 
 .star {
-  color: #d1d5db;
+  color: var(--color-star);
 }
 
 .star.active {
-  color: rgba(67, 160, 253, 1);
+  color: var(--color-blue);
 }
 
 .reviews {
   width: 22px;
   height: 14px;
-  color: #6b7280;
+  color: var(--color-text-soft);
   font-size: 14px;
 }
 
@@ -152,11 +213,11 @@ body {
 }
 
 .stock.in {
-  color: #0cba7a;
+  color: var(--color-green);
 }
 
 .stock.out {
-  color: #c9c9c9;
+  color: var(--color-gray);
 }
 
 .stock-icon {
@@ -169,12 +230,12 @@ body {
 }
 
 .category {
-  color: #9ca3af;
+  color: var(--color-text-muted);
 }
 
 .volume {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--color-text-soft);
 }
 
 /* пагинация */
@@ -189,13 +250,13 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  background: white;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
 }
 
 .pagination .active {
   border-radius: 6px;
-  border: 1px solid #43a0fd;
+  border: 1px solid var(--color-blue);
 }
 
 .discount-badge {
@@ -224,7 +285,7 @@ body {
 
   font-size: 14px;
   font-weight: 700;
-  color: white;
+  color: var(--color-background);
 }
 
 .actions {
@@ -238,31 +299,48 @@ body {
   height: 50px;
 
   border-radius: 15px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-border);
 
   padding: 0 12px;
-  background: white;
+  background: var(--color-background);
 
-  font-size: 14px;
+  font-size: 18px;
+
+  font-family: "Klein";
+  font-weight: 500;
+
+  text-align: center;
 }
 
 .cart-btn {
   flex: 1;
-
   height: 50px;
-
   border-radius: 15px;
-  border: 1px solid #e5e7eb;
-
-  background: #e8f4ff;
+  border: 1px solid var(--color-border);
+  background: var(--color-blue-light);
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
+
+  transition: all 0.15s ease;
+
+  font-family: "Klein";
+  font-weight: 500;
+}
+
+.cart-btn:hover {
+  background: var(--color-blue-light-hover);
+}
+
+.cart-btn:active {
+  transform: scale(0.97);
+  background: var(--color-blue-light-active);
+  box-shadow: inset 0 2px 4px var(--color-shadow);
 }
 
 .sort {
@@ -271,7 +349,7 @@ body {
   gap: 8px;
 
   font-size: 16px;
-  color: #1f2937;
+  color: var(--color-text-dark);
 
   position: relative;
 }
@@ -298,15 +376,14 @@ body {
 
 .sort-arrow {
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--color-text-muted);
 }
 
 .sort-arrow-icon {
   width: 9px;
   height: 16px;
   padding: 0;
-  color: #9ca3af;
-  /* серый */
+  color: var(--color-text-muted);
 }
 
 .sort-dropdown {
@@ -314,13 +391,13 @@ body {
   top: 28px;
   right: 0;
 
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
 
   width: 180px;
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px var(--color-shadow);
 }
 
 .sort-dropdown div {
@@ -329,7 +406,7 @@ body {
 }
 
 .sort-dropdown div:hover {
-  background: #f3f4f6;
+  background: var(--color-bg-dropdown);
 }
 
 .sort-arrow-icon.active {
@@ -347,7 +424,7 @@ body {
 
 .catalog-count {
   font-size: 16px;
-  color: #182A42;
+  color: var(--color-text-main);
   opacity: 50%;
 }
 
@@ -372,13 +449,15 @@ body {
   height: 44px;
 
   padding-left: 51.63px;
-  /* место для иконки */
 
   border-radius: 10px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-border);
 
-  background: #f6f7f9;
-  font-size: 14px;
+  background: var(--color-bg-light);
+  font-size: 18px;
+  font-family: "Afacad";
+  font-weight: 400;
+  letter-spacing: -2%;
 }
 
 .footer {
@@ -405,14 +484,19 @@ body {
 }
 
 .footer-text {
+  font-family: "Klein";
+  font-weight: 400;
   font-size: 14px;
-  color: #8090A4;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+
+  color: var(--color-text-footer);
 }
 
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
 }
 
 .footer-right img {

@@ -1,7 +1,7 @@
 import type { Product } from '../types/ProductType';
 import StockIcon from './StockIcon';
-import waterDrop from "../assets/waterDrop.svg"
-import discountBadge from "../assets/discountBadge.svg"
+import waterDrop from "../assets/svg/waterDrop.svg"
+import discountBadge from "../assets/svg/discountBadge.svg"
 
 interface Props {
   product: Product;

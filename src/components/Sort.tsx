@@ -1,6 +1,6 @@
 import { useState } from "react"
-import vectorUp from "../assets/vectorUp.svg"
-import vectorDown from "../assets/vectorDown.svg"
+import vectorUp from "../assets/svg/vectorUp.svg"
+import vectorDown from "../assets/svg/vectorDown.svg"
 
 
 interface Props {

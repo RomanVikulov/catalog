@@ -77,8 +77,9 @@ function App() {
 
         <Pagination total={sorted.length} perPage={itemsPerPage} page={page} onChange={setPage} />
 
-        <Footer />
+
       </div>
+       <Footer />
     </>
   );
 }

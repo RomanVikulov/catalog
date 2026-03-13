@@ -1,5 +1,5 @@
 import Search from "./Search"
-import logo from "../assets/icon.svg"
+import logo from "../assets/svg/icon.svg"
 
 
 

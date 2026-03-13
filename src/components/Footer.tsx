@@ -1,10 +1,10 @@
-import logo from "../assets/logo2.svg"
-import madeBg from "../assets/backgroundMade.svg"
-import madeUA from "../assets/madeInUkraine.svg"
-import mastercard from "../assets/mastercard.svg"
-import visa from "../assets/visa.svg"
-import applepay from "../assets/applepay.svg"
-import gpay from "../assets/gpay.svg"
+import logo from "../assets/svg/logo2.svg"
+import madeBg from "../assets/svg/backgroundMade.svg"
+import madeUA from "../assets/svg/madeInUkraine.svg"
+import mastercard from "../assets/svg/mastercard.svg"
+import visa from "../assets/svg/visa.svg"
+import applepay from "../assets/svg/applepay.svg"
+import gpay from "../assets/svg/gpay.svg"
 
 export default function Footer() {
   return (
