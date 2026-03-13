@@ -1,35 +1,33 @@
-import type { Product } from '../types/ProductType';
-import StockIcon from './StockIcon';
+import { memo } from "react"
+import type { Product } from "../types/ProductType"
+import StockIcon from "./StockIcon"
 import waterDrop from "../assets/svg/waterDrop.svg"
 import discountBadge from "../assets/svg/discountBadge.svg"
 
 interface Props {
-  product: Product;
+  product: Product
 }
 
-export default function ProductCard({ product }: Props) {
+function ProductCard({ product }: Props) {
   return (
-    <div className="product-card ">
-      <img className="product-img"
+    <div className="product-card">
+      <img
+        className="product-img"
         src={`/images/${product.image}`}
         alt={product.name}
         onError={(e) => {
-          (e.target as HTMLImageElement).src = '/images/placeholder.png';
+          (e.target as HTMLImageElement).src = "/images/placeholder.png"
         }}
       />
 
       <div className="price-row">
-
-        <span className="old-price">
-          {product.old_price}
-        </span>
+        <span className="old-price">{product.old_price}</span>
 
         <span className="price-now">
           {product.price} грн
         </span>
 
         <div className="discount-badge">
-
           <img
             src={discountBadge}
             alt=""
@@ -39,9 +37,7 @@ export default function ProductCard({ product }: Props) {
           <span className="discount-text">
             {product.discount_percent}%
           </span>
-
         </div>
-
       </div>
 
       <div className="card_title">{product.name}</div>
@@ -49,7 +45,10 @@ export default function ProductCard({ product }: Props) {
       <div className="rating">
         <div className="stars">
           {[1, 2, 3, 4, 5].map((i) => (
-            <span key={i} className={i <= Math.round(product.rating) ? 'star active' : 'star'}>
+            <span
+              key={i}
+              className={i <= Math.round(product.rating) ? "star active" : "star"}
+            >
               ★
             </span>
           ))}
@@ -59,7 +58,6 @@ export default function ProductCard({ product }: Props) {
       </div>
 
       <div className="meta">
-
         <StockIcon inStock={product.in_stock} />
 
         <img
@@ -68,18 +66,13 @@ export default function ProductCard({ product }: Props) {
           className="meta-icon"
         />
 
-        <span className="category">
-          {product.category}
-        </span>
-
+        <span className="category">{product.category}</span>
       </div>
 
       <div className="actions">
-
         {product.volumes.length > 1 && (
           <select className="volume-select">
-
-            {product.volumes.map(v => (
+            {product.volumes.map((v) => (
               <option
                 key={v.id}
                 value={v.id}
@@ -88,15 +81,13 @@ export default function ProductCard({ product }: Props) {
                 {v.label}
               </option>
             ))}
-
           </select>
         )}
 
-        <button className="cart-btn">
-          🛒 В корзину
-        </button>
-
+        <button className="cart-btn">🛒 В корзину</button>
       </div>
     </div>
-  );
+  )
 }
+
+export default memo(ProductCard)
