@@ -6,19 +6,19 @@
   justify-content: center;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1490px) {
   .grid {
     grid-template-columns: repeat(3, 347px);
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1130px) {
   .grid {
     grid-template-columns: repeat(2, 347px);
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .grid {
     grid-template-columns: 347px;
   }
