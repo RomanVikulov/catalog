@@ -13,11 +13,12 @@ function ProductCard({ product }: Props) {
     <div className="product-card">
       <img
         className="product-img"
-        src={`/images/${product.image}`}
+        src={`${import.meta.env.BASE_URL}images/${product.image}`}
         alt={product.name}
-        onError={(e) => {
-          (e.target as HTMLImageElement).src = "/images/placeholder.png"
-        }}
+       onError={(e) => {
+  (e.target as HTMLImageElement).src =
+    `${import.meta.env.BASE_URL}images/placeholder.png`
+}}
       />
 
       <div className="price-row">
